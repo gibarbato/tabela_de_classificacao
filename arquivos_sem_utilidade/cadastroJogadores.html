@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<title>Cadastro de jogadores</title>
+		<link rel="stylesheet" type="text/css" href="_css/estilo.css">
+	</head>
+	<body>
+		<div style= background-color: lightblue>
+		<h2>LISTA DE JOGADORES</H2>
+		<form method="get" action="ListaJogadores.php">
+			<table  border="1">
+				<tr>
+					<th><label>Jogadores</label></th>
+				</tr>
+				<tr>
+					<td><input type="radio" name="pesq" value="sim" checked> Mensalistas
+						<input type="radio" name="pesq" value="nao"> Não mensalistas
+						<input type="radio" name="pesq" value="todos"> Todos</td>
+				</tr>
+			</table>		
+					<input type="submit" value="Lista de Jogadores">
+		</form>
+		</div>
+
+		<div>
+		<h2>CADASTRO DE JOGADORES</H2>
+		
+		<form method="get" action="cadastro.php">
+			<table  border="1">
+				<tr>
+					<th><label>Nome:</label></th>
+					<th><label>Apelido:</label></th>
+					<th><label>Mensalista</label></th>
+				</tr>
+				<tr>
+					<td><input type="TEXT" name="nome" placeholder="Informe o nome do jogador" /><br></td>
+					<td><input type="TEXT" name="apelido" placeholder="Informe o apelido do jogador" /><br></td>
+					<td><input type="radio" name="situacao" value="sim" checked> Sim
+								<input type="radio" name="situacao" value="nao"> Não</td>	
+				</tr>
+			</table>		
+					<input type="submit" value="Enviar cadastro">
+				
+					</br>
+					</br>
+					<input name="resultado" type="button" onClick="window.open('inserir_resultado.php')" value="Inclusão de Resultado">
+		</form>	
+		</div>
+		
+		<div>
+			
+				<form method="get" action="teste.php">
+			<table  border="1">
+				<tr>
+					<th><label>Selecione o jogador:</label></th>
+				</tr>
+				<tr>
+					<td><?php
+				echo "<select name = 'editar'>";
+				echo "<option value = ''>Selecione<//td/option></br>";
+				$sql = 'select id, nome, apelido from jogador where situacao like "sim" order by nome';
+				foreach($connection->query($sql)as $row){
+				echo "<option value = ".$row['nome'].">".$row['nome'] . "<//td/option></br>";
+        		}
+				echo "</select>";
+		?></td>
+				</tr>
+			</table>		
+					<input type="submit" value="JOGADOR">
+	
+		</form>
+				
+		<h2>TABELA DE CLASSIFICAÇÃO</H2>
+		
+		<form method="get" action="classificacao2.php">
+			<table  border="1">
+				<tr>
+					<th><label>Data Inicial:</label></th>
+					<th><label>Data Final:</label></th>
+				</tr>
+				<tr>
+					<td><input type="date" name="dti" value= "today"></td>
+					<td><input type="date" name="dtf" value= "today"></td>
+				</tr>
+			</table>		
+					<input type="submit" value="Classificação">
+		</form>
+		</div>		
+	
+	
+	<br>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<title>Tabela turma da manguaça</title>
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+	</head>
+	<body>
+		
+		<form method="get" action="tdm_resultados.php">
+		<label>Data do jogo:</label><input type="date" name="dt" value= "today">
+		
+			<table  border=1>
+				<tr>
+					<th><label>Nome:</label></th><th><label>Confirmação do Jogo</label></th><th><label>Confirmação do Rango</label></th><th><label>Presença no Jogo</label></th><th><label>Time</label></th><th><label>Gols a favor</label></th><th><label>Gols contra</label></th></tr>
+						<tr><td>
+							<select name="j1">
+							<option value="gilberto">Gilberto</option>
+							<option value="peter">Peter</option>
+							<option value="almir">Almir</option>
+							<option value="homer">Homer</option>
+							</select><br></td>
+							<td><input type="checkbox" name="cj1" value= "sim" checked>Sim</td>	
+							<td><input type="checkbox" name="cr1" value= "sim" checked>Sim</td>	
+							<td><input type="checkbox" name="pj1" value= "sim" checked>Sim</td>	
+							<td><input type="radio" name="t1" value="A" checked> Time A
+								<input type="radio" name="t1" value="B"> Time B</td>
+							<td><input type="number" name="gf1" min="0" max="20"/></td>
+							<td><input type="number" name="gc1" min="0" max="20"/></td>
+						</tr>
+						<tr><td>
+							<select name="j2">
+							<option value="gilberto">Gilberto</option>
+							<option value="peter">Peter</option>
+							<option value="almir">Almir</option>
+							<option value="homer">Homer</option>
+							</select><br></td>
+							<td><input type="checkbox" name="cj2" value= "sim" checked>Sim</td>	
+							<td><input type="checkbox" name="cr2" value= "sim" checked>Sim</td>	
+							<td><input type="checkbox" name="pj2" value= "sim" checked>Sim</td>	
+							<td><input type="radio" name="t2" value="A" checked> Time A
+								<input type="radio" name="t2" value="B"> Time B</td>
+							<td><input type="number" name="gf2" min="0" max="20"/></td>
+							<td><input type="number" name="gc2" min="0" max="20"/></td>
+						</tr>
+						<tr><td>
+							<select name="j3">
+							<option value="gilberto">Gilberto</option>
+							<option value="peter">Peter</option>
+							<option value="almir">Almir</option>
+							<option value="homer">Homer</option>
+							</select><br></td>
+							<td><input type="checkbox" name="cj3" value= "sim" checked>Sim</td>	
+							<td><input type="checkbox" name="cr3" value= "sim" checked>Sim</td>	
+							<td><input type="checkbox" name="pj3" value= "sim" checked>Sim</td>	
+							<td><input type="radio" name="t3" value="A" checked> Time A
+								<input type="radio" name="t3" value="B"> Time B</td>
+							<td><input type="number" name="gf3" min="0" max="20"/></td>
+							<td><input type="number" name="gc3" min="0" max="20"/></td>
+						</tr>
+						<tr><td>
+							<select name="j4">
+							<option value="gilberto">Gilberto</option>
+							<option value="peter">Peter</option>
+							<option value="almir">Almir</option>
+							<option value="homer">Homer</option>
+							</select><br></td>
+							<td><input type="checkbox" name="cj4" value= "sim" checked>Sim</td>	
+							<td><input type="checkbox" name="cr4" value= "sim" checked>Sim</td>	
+							<td><input type="checkbox" name="pj4" value= "sim" checked>Sim</td>	
+							<td><input type="radio" name="t4" value="A" checked> Time A
+								<input type="radio" name="t4" value="B"> Time B</td>
+							<td><input type="number" name="gf4" min="0" max="20"/></td>
+							<td><input type="number" name="gc4" min="0" max="20"/></td>
+						</tr>
+			</table>		
+				<input type="submit" value="Enviar formulário">
+		</form>
+<br>
+
+</body>
+</html>
